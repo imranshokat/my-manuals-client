@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TILLIT</title>
+    <meta name="description" content="Tillit is a webpage service that is used to manage all of home appliance manuals like kitchen stove fridge blender fridge." />
+    <meta name="keywords" content="manuals, device, tillit, home, repair fix, web, how to, devices" />
+    <meta name="author" content="Team Awesome" />
+
+    <!-- Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Font Awesome CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <!-- Animate css -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <!-- Magnific css -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <!-- Custom styles CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" media="screen">
+    <!-- Responsive CSS -->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- Elegant Icons -->
+    <!--Rating Css-->
+    <link href="assets/css/rating.css" rel="stylesheet">
+
+    <!--    Ribbon CSS-->
+    
+    <link href="assets/css/ribbon.css" rel="stylesheet" />
+    <!--    Pricestyle css-->
+    <link href="assets/css/pricestyle.css" rel="stylesheet">
+    <!--    Bootstrap Toggle-->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+    <link rel="shortcut icon" href="assets/images/ico/favicon.png">
+    
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Izi plugin for alert popup -->
+    <link rel="stylesheet" href="assets/css/iziToast.css">
+<!--    Roboto Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    <style>
+        .btn-default {         
+            border: 0px;        
+        }
+        ul.dash {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 1em;
+        }
+
+       ul.dash > li:before {
+                display: inline-block;
+                content: "-";
+                width: 1em;
+                margin-left: -1em;
+            }
+    </style>
+
+</head>
+
+<body id="tablebody">
+    <!-- Preloader -->
+    <div id="tt-preloader">
+        <div id="pre-status">
+            <div class="preload-placeholder"></div>
+        </div>
+    </div>
+    <div id="search">
+        <button type="button" class="close">×</button>
+        <form>
+            <input id="searchBox" type="search" value="" placeholder="type product name" />
+           
+        </form>
+           <button id="searchButton" class="btn btn-primary" >Search</button>
+    </div>
+    <!-- Navigation -->
+    <header id="newProductHeader" class="header">
+        <nav class="navbar navbar-custom" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="homeButton" href="index.html"><img src="assets/images/log-01.png" alt=""></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="custom-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li> <a>Categories <span class="caret"></span> </a>
+                            <ul id="menuCategories" class="dropdown-menu" role="menu">
+                                <li>
+                                    <a id="allcategories"> </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="noSignIn" style="display:none;"><a href="" data-toggle="modal" data-target="#modallogin">Sign In</a></li>
+                        <li>
+                            <a href="#" id="topsearchbutton"> <span class="glyphicon glyphicon-search"></span></a>
+                        </li>
+                        <li id="userID" class="dropdown">
+                            <a id="userNameDisplay" href="#" class="" data-toggle="dropdown"><span id="GreetingsUser"></span> <span class="caret"></span></a>
+                            <ul id="navRight" class="dropdown-menu">
+                                <li><a href="#">Prefferences</a></li>
+                                <li class="divider"></li>
+                                <li><a id="userLogout" href="#">Sign Out</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- .container -->
+        </nav>
+    </header>
+
+       <div class="jumbotron" id="Top"> 
+       
+       <img class="jumbotronImages" src="assets/images/cards-01.png">
+       <p class="centeredParagraph">Here you can find all the details about your product.</p>
+        </div>
+ 
+        <div class="container">
+            <!--<div class="col-md-4 col-md-offset-4 column productbox">
+                <img src="assets/images/no-image-available2.png" class="img-responsive">              
+                <div class="productprice">
+            <div class="pricetext">Product: <span id="name"></span></div>
+                </div>
+                  <div class="productprice">
+                <div class="pricetext"></div>
+                </div>
+                
+        <div class="producttitle">Model: <span id="model"></span> </div>
+        <div class="producttitle">Categories:<span id="categories"></span> </div>
+                  <div class="producttitle">Made by: <span id="CompName"></span></div>
+
+            </div>-->
+
+        </div>
+   
+
+    <section class="section">
+        <div class="container">
+            <div class="col-lg-12 col-sm-12 col-md-12">
+                <div class="col-md-4 column productbox">
+                    <img src="assets/images/no-image-available2.png" class="img-responsive">
+                    <div class="productprice">
+                        <div class="pricetext"><span id="name"></span></div>
+                    </div>
+                    <div class="productprice">
+                        <div class="pricetext"></div>
+                    </div>
+
+                    <div class="producttitle">Model: <span id="model"></span> </div>
+                    <div class="producttitle">Categories: <span id="categories"></span> </div>
+                    <div class="producttitle">Made by: <span id="CompName"></span></div>
+
+                </div>
+                <div id="myCarousel" class="carousel slide col-lg-8 col-md-8 col-sm-12" data-ride="carousel" data-interval="false">
+
+                    <ul class="nav nav-pills nav-justified">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"><a href=" #">Manual</a></li>
+                        <li data-target="#myCarousel" data-slide-to="1"><a href="#">Video Tutorials</a></li>
+                        <li class="subscriptions" data-target="#myCarousel" data-slide-to="2"><a class="subscriptions" href="#">Subscription</a></li>
+                    </ul>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner productbox-green">
+
+                        <!-- End Item -->
+
+                        <div class="item active">
+
+                            <div class="board">
+                                <div class="carousel-caption" style="right:7%;left:7%;">
+                                    <div id="productManual" class="">                                        
+                                        <p id="LinksManual">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+
+                            <div class="board">
+                                <div class="carousel-caption" style="right:7%;left:7%;">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div id="prodVideo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                        <div class="item">
+                            <div class="board">
+                                <div class="carousel-caption">
+                                    <!--<div class="container">-->
+                                        <div class="col-md-12">
+                                            <ul id="productSubscribeList" class=""></ul>
+                                        </div>
+                                    <!--</div>-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Item -->
+
+                    </div>
+                    <!-- End Carousel Inner -->
+
+                    <div id="ProductComments" style="display: none; background-color: #ffffff;margin-top:2%;" class="col-lg-12 col-md-12 col-sm-12 productbox">
+                        <div style="margin:2%">
+                            <h1 style="border-bottom: 1px solid #eee;" class="pricetext ">Comments</h1>
+                            <br>
+                            <div id="allquestionAns">
+
+                            </div>
+                            <div style="display:none;text-align:left" id="questionError" class="alert alert-danger">
+                                Validation error<br>
+                                1. Must type your question
+                            </div>
+                            <form id="repQuestionForm" style="margin-top: 2%;" onsubmit="return submitQuestion();">
+                                <div class="form-group">
+                                    <h3 class="sbold blog-comments-title">Leave a comment:</h3>
+                                    <br>
+                                    <textarea id="custQuestion" name="custQuestion" rows="5" class="form-control c-square" required="required" placeholder="Type your question"></textarea>
+                                </div>
+                                <div class="form-group" style="float:right">
+                                    <button type="submit" id="submit-btn-question" class="btn btn-success uppercase">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Carousel -->                
+            </div></div>
+    </section>    
+    <section class="section section-padding"></section>
+    <div class="modal fade" tabindex="-1" role="dialog" id="commentsModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Comments</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="scroller" id="ExistComment" data-always-visible="1" data-rail-visible1="1">
+                        <p>Existing Comments:</p>
+                        <ul id="yComments" class="dash"></ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <form class="form-horizontal" id="commentForm" onsubmit="return submitNewComment();">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div style="display:none;text-align:left" id="errordivs" class="alert alert-danger">
+                                Validation error
+                                <br> 1. Must type comment
+                            </div>
+                            <input type="hidden" id="recrdId" />
+                            <input type="hidden" id="rType" />
+                            <div class="form-group">
+                                <label style="float:left">New Comment:</label>
+                                <input class="form-control" placeholder="Type new comment here" id="newComment" />
+                            </div>
+                            <div class="form-group" style="text-align:center">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!--    Login-->
+    <div class="modal fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-popup">
+                <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+                <h1 class="white topText">Welcome back</h1>
+                <form action="" class="popup-form">
+                    <input id="fpUsername" type="text" class="form-control form-white" placeholder="Email Address">
+                    <input id="fpPassword" class="form-control form-white" type="password" placeholder="Password">
+                    <button id="fpSignIN" type="submit" class="btn btn-primary">Enter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="ProdId" />
+    <!-- Scroll-up -->
+    <div class="scroll-up">
+        <a href="#Top"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <!-- Javascript files -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    
+    
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <script src="assets/js/iziToast.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/base.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+    <script src="assets/js/userInfo.js"></script>
+    <script src="assets/js/userLogout.js"></script>
+   
+ <script src="assets/js/sessionHandle.js"></script>
+    <script src="assets/js/detailCarousel.js"></script>
+    <script src="assets/js/productDetail.js"></script>
+   
+    <script src="assets/js/consumerProductSubscribe.js"></script>
+    <script src="assets/js/externalSearch.js"></script>
+
+</body>
+
+
+</html>
